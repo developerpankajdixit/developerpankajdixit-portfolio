@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Link from "next/link";
+import SiteHeader from "./components/SiteHeader";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,14 +32,6 @@ export const metadata: Metadata = {
   },
 };
 
-const navItems = [
-  { label: "Work", href: "/#projects" },
-  { label: "Services", href: "/#services" },
-  { label: "Case Study", href: "/case-study" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/#contact" },
-];
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -55,33 +47,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <div className="section-shell pt-4">
-          <header className="surface sticky top-4 z-20 rounded-lg px-3 py-3 sm:px-4">
-            <nav
-              className="flex flex-wrap items-center justify-between gap-3"
-              aria-label="Global"
-            >
-              <Link
-                href="/"
-                className="flex items-center gap-2 text-sm font-bold text-zinc-950"
-              >
-                <span className="grid h-8 w-8 place-items-center rounded-md bg-zinc-950 text-xs text-white">
-                  PD
-                </span>
-                <span>Pankaj Dixit</span>
-              </Link>
-              <div className="flex max-w-full items-center gap-1 overflow-x-auto text-sm">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="rounded-md px-2.5 py-1.5 font-medium text-zinc-600 transition-colors hover:bg-white hover:text-zinc-950 sm:px-3"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </nav>
-          </header>
+          <SiteHeader />
         </div>
         {children}
       </body>
