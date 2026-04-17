@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Pankaj Dixit | Frontend Lead & Architect",
   description:
-    "Senior Frontend Lead with 10+ years of experience in architecture, performance, and enterprise-scale applications.",
+    "Senior Frontend Lead with 11+ years of experience in architecture, performance, and enterprise-scale applications.",
 };
 
 const strengths = [

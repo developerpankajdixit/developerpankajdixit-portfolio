@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import Projects from "./components/Projects";
+import ContactForm from "./components/ContactForm";
 
 const proofPoints = [
   {
-    value: "10+",
+    value: "11+",
     label: "years building production frontend systems",
   },
   {
@@ -41,6 +42,39 @@ const process = [
   "Map the product flow before touching the component layer.",
   "Build a scalable interface with reusable patterns.",
   "Measure performance, accessibility, and release readiness.",
+];
+
+const positioningHighlights = [
+  {
+    title: "Hiring managers",
+    text: "See ownership, impact, and engineering maturity without digging through multiple pages.",
+  },
+  {
+    title: "Clients and founders",
+    text: "Understand how frontend decisions connect directly to speed, clarity, and business outcomes.",
+  },
+  {
+    title: "LinkedIn visitors",
+    text: "Get a quick profile snapshot, then move into projects, case study, and direct contact.",
+  },
+];
+
+const contactMethods = [
+  {
+    label: "Email",
+    value: "developerpankajdixit@gmail.com",
+    href: "mailto:developerpankajdixit@gmail.com",
+  },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/developerpankajdixit",
+    href: "https://www.linkedin.com/in/developerpankajdixit/",
+  },
+  {
+    label: "GitHub",
+    value: "github.com/developerpankajdixit",
+    href: "https://github.com/developerpankajdixit",
+  },
 ];
 
 export default function Home() {
@@ -91,19 +125,49 @@ export default function Home() {
       </section>
 
       <section className="section-shell py-10 sm:py-14">
-        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-          <div>
-            <p className="eyebrow">Positioning</p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl">
-              A portfolio built for hiring managers, clients, and LinkedIn visitors.
-            </h2>
+        <div className="surface relative overflow-hidden rounded-lg p-6 sm:p-8 lg:p-10">
+          <div className="pointer-events-none absolute -right-20 top-0 h-56 w-56 rounded-full bg-lime-300/20 blur-3xl" />
+          <div className="relative grid gap-8 lg:grid-cols-2 lg:items-start">
+            <div className="max-w-2xl">
+              <p className="eyebrow">Positioning</p>
+              <h2 className="mt-3 text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl">
+                Built to earn trust in the first scroll.
+              </h2>
+              <p className="mt-4 text-base leading-8 text-zinc-600 sm:text-lg">
+                This flow moves from credibility to proof, then into services
+                and direct contact. It helps decision makers quickly answer one
+                question: can Pankaj lead and deliver high-quality frontend
+                products?
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="rounded-full border border-zinc-300 bg-white px-3 py-1 text-xs font-semibold text-zinc-700">
+                  Clear outcomes
+                </span>
+                <span className="rounded-full border border-zinc-300 bg-white px-3 py-1 text-xs font-semibold text-zinc-700">
+                  Enterprise-ready
+                </span>
+                <span className="rounded-full border border-zinc-300 bg-white px-3 py-1 text-xs font-semibold text-zinc-700">
+                  Client-focused
+                </span>
+              </div>
+            </div>
+
+            <div className="grid gap-3">
+              {positioningHighlights.map((item) => (
+                <article
+                  key={item.title}
+                  className="rounded-md border border-zinc-200/90 bg-white/85 p-4"
+                >
+                  <h3 className="text-sm font-bold uppercase tracking-wide text-zinc-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-7 text-zinc-600">
+                    {item.text}
+                  </p>
+                </article>
+              ))}
+            </div>
           </div>
-          <p className="text-base leading-8 text-zinc-600 sm:text-lg">
-            The site now leads with credibility, then moves into selected work,
-            business impact, services, process, and a clear contact path. Every
-            section answers the same question: can Pankaj deliver a high-quality
-            frontend product?
-          </p>
         </div>
       </section>
 
@@ -175,18 +239,36 @@ export default function Home() {
                 Ready for client work, team leadership, and frontend product ownership.
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-8 text-zinc-200">
-                Share this portfolio with hiring managers or clients, then add
-                your final LinkedIn and email links when you are ready to go
-                live.
+                Reach out directly through email, LinkedIn, or GitHub. You can
+                also send project details with the quick contact form.
               </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                {contactMethods.map((method) => (
+                  <a
+                    key={method.label}
+                    href={method.href}
+                    target={method.href.startsWith("http") ? "_blank" : undefined}
+                    rel={method.href.startsWith("http") ? "noreferrer" : undefined}
+                    className="rounded-md border border-white/25 bg-white/5 px-4 py-3 transition-colors hover:border-lime-300 hover:bg-white/10"
+                  >
+                    <p className="text-xs font-bold uppercase tracking-wide text-lime-200">
+                      {method.label}
+                    </p>
+                    <p className="mt-1 break-all text-sm text-zinc-100">{method.value}</p>
+                  </a>
+                ))}
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link href="/case-study" className="btn-primary border-lime-300 bg-lime-300 text-zinc-950 hover:border-white hover:bg-white">
+                  Read Case Study
+                </Link>
+                <Link href="/about" className="btn-secondary border-white/45 bg-white/10 text-white hover:border-white hover:bg-white/20">
+                  More About Pankaj
+                </Link>
+              </div>
             </div>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-              <Link href="/case-study" className="btn-primary border-lime-300 bg-lime-300 text-zinc-950 hover:border-white hover:bg-white">
-                Read Case Study
-              </Link>
-              <Link href="/about" className="btn-secondary border-white/45 bg-white/10 text-white hover:border-white hover:bg-white/20">
-                More About Pankaj
-              </Link>
+            <div>
+              <ContactForm />
             </div>
           </div>
         </div>
