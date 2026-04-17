@@ -127,49 +127,49 @@ export default function Projects() {
 
   return (
     <section id="projects" className="section-shell py-12 sm:py-16">
-      <div className="surface rounded-lg p-5 sm:p-6 lg:p-8">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-2xl">
-            <p className="eyebrow">Selected Work</p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl">
-              Practical frontend work with business impact.
-            </h2>
-            <p className="mt-4 text-base leading-8 text-zinc-600 sm:text-lg">
-              Every project below is framed by problem, contribution, and
-              measurable result so decision makers can evaluate outcomes fast.
-            </p>
-            <p className="mt-3 text-sm font-medium text-zinc-500">
-              {visibleProjects.length} project stories in{" "}
-              {activeTab.toLowerCase()} view.
-            </p>
-          </div>
-
-          <div
-            className="flex flex-wrap gap-2"
-            role="tablist"
-            aria-label="Project categories"
-          >
-            {tabs.map((tab) => {
-              const isActive = activeTab === tab;
-              return (
-                <button
-                  key={tab}
-                  type="button"
-                  onClick={() => setActiveTab(tab)}
-                  className={`rounded-full border px-4 py-2 text-sm font-semibold transition-all ${
-                    isActive
-                      ? "border-zinc-950 bg-zinc-950 text-white shadow-sm"
-                      : "border-zinc-300 bg-white text-zinc-700 hover:border-zinc-950 hover:text-zinc-950"
-                  }`}
-                  aria-selected={isActive}
-                  role="tab"
-                >
-                  {tab}
-                </button>
-              );
-            })}
-          </div>
+      <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+        <div>
+          <p className="eyebrow">Selected Work</p>
+          <h2 className="mt-3 text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl">
+            Practical frontend work with business impact.
+          </h2>
         </div>
+        <div>
+          <p className="max-w-2xl text-base leading-8 text-zinc-600 sm:text-lg">
+            Every project below is framed by problem, contribution, and
+            measurable result so decision makers can evaluate outcomes fast.
+          </p>
+          <p className="mt-3 text-sm font-medium text-zinc-500">
+            {visibleProjects.length} project stories in{" "}
+            {activeTab.toLowerCase()} view.
+          </p>
+        </div>
+      </div>
+
+      <div
+        className="mt-8 flex flex-wrap gap-2"
+        role="tablist"
+        aria-label="Project categories"
+      >
+        {tabs.map((tab) => {
+          const isActive = activeTab === tab;
+          return (
+            <button
+              key={tab}
+              type="button"
+              onClick={() => setActiveTab(tab)}
+              className={`rounded-md border px-4 py-2 text-sm font-semibold transition-all ${
+                isActive
+                  ? "border-zinc-950 bg-zinc-950 text-white"
+                  : "border-zinc-300 bg-white/80 text-zinc-700 hover:border-zinc-950 hover:text-zinc-950"
+              }`}
+              aria-selected={isActive}
+              role="tab"
+            >
+              {tab}
+            </button>
+          );
+        })}
       </div>
 
       <div className="mt-6 grid gap-5 md:grid-cols-2">
