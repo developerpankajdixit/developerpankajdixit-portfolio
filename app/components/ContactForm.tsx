@@ -89,6 +89,9 @@ export default function ContactForm() {
           <input
             required
             value={fields.name}
+            name="name"
+            autoComplete="name"
+            placeholder="Your name"
             onChange={(e) =>
               setFields((prev) => ({ ...prev, name: e.target.value }))
             }
@@ -102,6 +105,9 @@ export default function ContactForm() {
             type="email"
             required
             value={fields.email}
+            name="email"
+            placeholder="you@example.com"
+            autoComplete="email"
             onChange={(e) =>
               setFields((prev) => ({ ...prev, email: e.target.value }))
             }
@@ -110,9 +116,12 @@ export default function ContactForm() {
         </label>
 
         <label className="text-sm font-semibold text-zinc-100">
-          Company
+          Company (optional)
           <input
             value={fields.company}
+            name="company"
+            placeholder="Company name"
+            autoComplete="organization"
             onChange={(e) =>
               setFields((prev) => ({ ...prev, company: e.target.value }))
             }
@@ -121,10 +130,13 @@ export default function ContactForm() {
         </label>
 
         <label className="text-sm font-semibold text-zinc-100">
-          Message
+          Project details
           <textarea
             required
             value={fields.message}
+            name="message"
+            placeholder="Tell me about your project, timeline, and goals."
+            rows={5}
             onChange={(e) =>
               setFields((prev) => ({ ...prev, message: e.target.value }))
             }
