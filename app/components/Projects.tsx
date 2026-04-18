@@ -6,6 +6,11 @@ import { useMemo, useState } from "react";
 
 type Tab = "Featured" | "Enterprise" | "Client Work";
 
+type ProjectLink = {
+  label: string;
+  href: string;
+};
+
 type Project = {
   title: string;
   client: string;
@@ -15,105 +20,140 @@ type Project = {
   categories: Tab[];
   image: string;
   alt: string;
+  visibility?: "Public" | "Confidential";
+  links?: ProjectLink[];
 };
 
 const tabs: Tab[] = ["Featured", "Enterprise", "Client Work"];
 
 const projects: Project[] = [
   {
-    title: "Enterprise Developer Platform Optimization",
+    title: "Microsoft Partner Center Feature Delivery",
     client: "Microsoft / Xbox",
     problem:
-      "Platform teams were slowed by inconsistent frontend patterns and heavy release cycles.",
+      "Partner-facing workflows needed reliable frontend updates and feature delivery within a login-gated enterprise platform.",
     contributions: [
-      "Unified reusable UI standards across multiple product teams",
-      "Reduced rendering bottlenecks in high-traffic product areas",
-      "Introduced delivery guardrails that improved release predictability",
+      "Worked on new feature development and scoped production updates for Partner Center experiences",
+      "Improved UI consistency and delivery quality across enterprise partner workflows",
+      "Shipped changes with release guardrails suited for authenticated product surfaces",
     ],
     metrics: [
-      { label: "Release cycle speed", value: "+30%" },
-      { label: "Page performance", value: "+40%" },
+      { label: "Product area", value: "Partner Center" },
+      { label: "Access level", value: "Confidential" },
     ],
     categories: ["Featured", "Enterprise"],
     image:
       "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=80",
     alt: "Enterprise team planning frontend platform improvements",
+    visibility: "Confidential",
   },
   {
     title: "VS Legal Partners Website",
     client: "VS Legal Partners",
     problem:
-      "The brand needed a modern website that could convert visitors into qualified leads.",
+      "The firm needed a complete digital presence to build trust, clarify services, and convert visitors into consultation leads.",
     contributions: [
-      "Restructured pages to clarify services and user intent",
-      "Improved mobile and accessibility quality across key journeys",
-      "Implemented a lean content model for faster updates",
+      "Led end-to-end client consultation to capture requirements, priorities, and business goals",
+      "Owned complete execution from scratch to live launch, including UI design direction and content structure",
+      "Delivered branding and go-live essentials across logo, content, domain setup, and production release",
     ],
     metrics: [
-      { label: "Engagement", value: "+35%" },
-      { label: "Lead conversions", value: "+22%" },
+      { label: "Ownership", value: "End-to-end" },
+      { label: "Delivery", value: "Scratch to live" },
     ],
     categories: ["Featured", "Client Work"],
-    image:
-      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=80",
+    image: "/vs-legal-partners-hero.png",
     alt: "Professional workspace for legal services website strategy",
+    links: [{ label: "VS Legal Partners", href: "https://www.vslegalpartners.com/" }],
   },
   {
-    title: "Healthcare Management System",
-    client: "Multi-hospital Network",
+    title: "Online Doctor Consultation Revamp",
+    client: "Tata 1mg",
     problem:
-      "Care teams needed a clearer digital workflow to reduce operational delays.",
+      "The online consultation journey required stronger UI consistency and a clearer user flow to support trust and conversions.",
     contributions: [
-      "Redesigned patient journey flows for faster daily tasks",
-      "Rolled out role-based UI states for safer operations",
-      "Improved system clarity for non-technical staff usage",
+      "Contributed to the revamp of the online doctor consultation experience",
+      "Improved frontend consistency and interaction quality across key consultation surfaces",
+      "Collaborated with product and engineering teams to deliver production-safe updates",
     ],
     metrics: [
-      { label: "Workflow time", value: "-50%" },
-      { label: "Operational uptime", value: "99.9%" },
+      { label: "Contribution", value: "Consultation revamp" },
+      { label: "Domain", value: "Digital health" },
     ],
-    categories: ["Enterprise"],
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=80",
-    alt: "Healthcare workflow tools for hospital operations",
+    categories: ["Featured", "Client Work"],
+    image: "/tata-1mg-consultation-hero.png",
+    alt: "Online healthcare consultation product interface",
+    links: [
+      {
+        label: "Live consultation flow",
+        href: "https://www.1mg.com/online-doctor-consultation",
+      },
+    ],
   },
   {
-    title: "Frontend Architecture Dashboard",
-    client: "Internal Product Team",
+    title: "AT&T Feature Enhancements",
+    client: "AT&T",
     problem:
-      "Engineering teams lacked a clear view of UI quality and delivery health.",
+      "Large-scale telecom journeys required targeted feature updates while preserving stability in a mature enterprise platform.",
     contributions: [
-      "Created a shared dashboard for performance and quality signals",
-      "Standardized front-end reporting across multiple squads",
-      "Enabled faster planning decisions with clear trend tracking",
+      "Worked on new feature development and update requests for selected AT&T surfaces",
+      "Delivered scoped frontend changes within established enterprise release processes",
+      "Focused on incremental UX and quality improvements without disrupting existing flows",
     ],
     metrics: [
-      { label: "Decision turnaround", value: "-35%" },
-      { label: "Cross-team visibility", value: "+60%" },
+      { label: "Delivery model", value: "Feature updates" },
+      { label: "Access level", value: "Confidential" },
     ],
     categories: ["Enterprise"],
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80",
-    alt: "Analytics dashboard used for frontend architecture decisions",
+    alt: "Enterprise telecom product planning and release workflows",
+    visibility: "Confidential",
   },
   {
-    title: "Modern E-Commerce Platform",
-    client: "Retail Client",
+    title: "Agency Multi-Client Website Delivery",
+    client: "PulpStrategy",
     problem:
-      "Mobile shoppers dropped off due to a slow and cluttered purchase flow.",
+      "Multiple brands needed modern, maintainable websites with responsive UX and dependable delivery quality.",
     contributions: [
-      "Simplified product discovery and checkout interaction patterns",
-      "Improved responsive UI consistency across major devices",
-      "Refined onboarding for campaigns and product launches",
+      "Delivered frontend implementations and updates across multiple client websites",
+      "Balanced performance, responsiveness, and content clarity for varied brand contexts",
+      "Supported ongoing improvements with production-ready UI and quality checks",
     ],
     metrics: [
-      { label: "Checkout completion", value: "+18%" },
-      { label: "Mobile bounce rate", value: "-24%" },
+      { label: "Client websites", value: "5+" },
+      { label: "Delivery model", value: "Agency" },
     ],
     categories: ["Client Work"],
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80",
-    alt: "Responsive commerce interface on a laptop",
+    alt: "Agency team delivering multiple client website projects",
+    links: [
+      { label: "Renaissance Spaces", href: "https://www.renaissance-spaces.in/" },
+      { label: "Change Alliance", href: "https://www.changealliance.in/" },
+      { label: "Pulse Advertising", href: "https://www.pulse-advertising.com/" },
+      { label: "VCM", href: "https://vcm.org.in/" },
+      { label: "End AIDS India", href: "https://endaidsindia.org/" },
+    ],
+  },
+  {
+    title: "LimeTray Product Platform",
+    client: "LimeTray",
+    problem:
+      "The hospitality product required continuous frontend development across evolving features and shared team ownership.",
+    contributions: [
+      "Contributed to product feature development as part of the LimeTray engineering team",
+      "Implemented scalable frontend modules with maintainability and usability in mind",
+      "Supported iterative platform updates through collaborative release execution",
+    ],
+    metrics: [
+      { label: "Product type", value: "B2B platform" },
+      { label: "Role", value: "Team contribution" },
+    ],
+    categories: ["Enterprise", "Client Work"],
+    image: "/limetray-hero.png",
+    alt: "SaaS product team working on hospitality platform features",
+    links: [{ label: "LimeTray", href: "https://limetray.com/" }],
   },
 ];
 
@@ -127,23 +167,21 @@ export default function Projects() {
 
   return (
     <section id="projects" className="section-shell py-12 sm:py-16">
-      <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-        <div>
-          <p className="eyebrow">Selected Work</p>
-          <h2 className="mt-3 text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl">
-            Practical frontend work with business impact.
-          </h2>
-        </div>
-        <div>
-          <p className="max-w-2xl text-base leading-8 text-zinc-600 sm:text-lg">
-            Every project below is framed by problem, contribution, and
-            measurable result so decision makers can evaluate outcomes fast.
-          </p>
-          <p className="mt-3 text-sm font-medium text-zinc-500">
-            {visibleProjects.length} project stories in{" "}
-            {activeTab.toLowerCase()} view.
-          </p>
-        </div>
+      <div className="max-w-4xl">
+        <p className="eyebrow">Selected Work</p>
+        <h2 className="mt-3 text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl">
+          Practical frontend work with business impact.
+        </h2>
+        <p className="mt-4 text-base leading-8 text-zinc-600 sm:text-lg">
+          Every project below is framed by problem, contribution, and
+          measurable result so decision makers can evaluate outcomes fast.
+          Public projects include live links, while confidential enterprise
+          work is intentionally presented without direct product access.
+        </p>
+        <p className="mt-3 text-sm font-medium text-zinc-500">
+          {visibleProjects.length} project stories in{" "}
+          {activeTab.toLowerCase()} view.
+        </p>
       </div>
 
       <div
@@ -191,6 +229,11 @@ export default function Projects() {
               <p className="text-xs font-bold uppercase text-zinc-500">
                 {project.client}
               </p>
+              {project.visibility === "Confidential" ? (
+                <p className="mt-2 inline-flex rounded-full border border-amber-300 bg-amber-50 px-2 py-1 text-[11px] font-semibold uppercase tracking-wide text-amber-700">
+                  Confidential Scope
+                </p>
+              ) : null}
               <h3 className="mt-2 text-2xl font-bold leading-tight text-zinc-950">
                 {project.title}
               </h3>
@@ -226,6 +269,27 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
+
+              {project.links?.length ? (
+                <div className="mt-5 border-t border-zinc-200 pt-4">
+                  <h4 className="text-xs font-bold uppercase text-zinc-500">
+                    Project Links
+                  </h4>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {project.links.map((item) => (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-md border border-zinc-300 bg-white px-3 py-1.5 text-xs font-semibold text-zinc-700 transition-colors hover:border-zinc-950 hover:text-zinc-950"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </div>
           </article>
         ))}
