@@ -55,6 +55,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const handleContextMenu = (e: React.MouseEvent) => {
+    e.preventDefault();
+  };
+
+  const handleCopy = (e: React.ClipboardEvent) => {
+    e.preventDefault();
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    // Block common shortcuts: View Source / DevTools / Save
+    const key = e.key.toLowerCase();
+    if ((e.ctrlKey || e.metaKey) && (key === "u" || key === "s")) {
+      e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && key === "i") {
+      e.preventDefault();
+    }
+  };
   return (
     <html
       lang="en"
@@ -62,8 +80,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body
-        className="app-bg min-h-full text-zinc-950"
+        className="app-bg no-select watermark min-h-full text-zinc-950"
         suppressHydrationWarning={true}
+        onContextMenu={handleContextMenu}
+        onCopy={handleCopy}
+        onKeyDown={handleKeyDown}
       >
         <div className="section-shell pt-4">
           <SiteHeader />
@@ -92,6 +113,7 @@ export default function RootLayout({
         />
         <Analytics />
         <SpeedInsights />
+        <div className="copy-notice">Content protected — © Pankaj Dixit</div>
       </body>
     </html>
   );

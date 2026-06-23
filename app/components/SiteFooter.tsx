@@ -4,6 +4,8 @@ const footerLinks = [
   { label: "Email", href: "mailto:developerpankajdixit@gmail.com" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/developerpankajdixit/" },
   { label: "GitHub", href: "https://github.com/developerpankajdixit" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Copyright", href: "/copyright" },
 ];
 
 export default function SiteFooter() {
