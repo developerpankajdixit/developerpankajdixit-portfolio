@@ -93,25 +93,6 @@ const projects: Project[] = [
     caseStudy: "shieldai",
   },
   {
-    title: "AI Champion Enablement Program",
-    client: "Microsoft / Xbox · Tech Mahindra",
-    problem:
-      "The account needed higher AI readiness and practical, hands-on adoption of Copilot tooling across engineering teams.",
-    contributions: [
-      "Served as an AI Champion, running weekly sessions on Copilot tooling and prompt engineering",
-      "Enabled 17+ engineers to earn AI White Belt certification, raising AI readiness across the account",
-      "Drove org-wide AI adoption with reusable enablement material and knowledge sharing",
-    ],
-    metrics: [
-      { label: "Engineers enabled", value: "17+" },
-      { label: "Cadence", value: "Weekly sessions" },
-    ],
-    categories: ["Featured", "AI & Automation"],
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80",
-    alt: "Team enablement and AI adoption training session",
-  },
-  {
     title: "Legacy UI Modernization (Angular to React)",
     client: "Microsoft / Xbox · Tech Mahindra",
     problem:
