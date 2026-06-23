@@ -3,7 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
 import { Toaster } from "react-hot-toast";
+<<<<<<< HEAD
 import { Analytics } from "@vercel/analytics/react";
+=======
+import { SpeedInsights } from "@vercel/speed-insights/next";
+>>>>>>> origin/main
 import "./globals.css";
 
 const geistSans = Geist({
@@ -89,7 +93,11 @@ export default function RootLayout({
             },
           }}
         />
+<<<<<<< HEAD
         <Analytics />
+=======
+        <SpeedInsights />
+>>>>>>> origin/main
       </body>
     </html>
   );
