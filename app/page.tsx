@@ -5,57 +5,57 @@ import ContactForm from "./components/ContactForm";
 
 const proofPoints = [
   {
-    value: "11+",
-    label: "years building production frontend systems",
+    value: "2 wks → 30 min",
+    label: "developer onboarding time, automated with an AI-powered MCP server",
   },
   {
-    value: "40%",
-    label: "performance gains across key product surfaces",
+    value: "80+ hrs",
+    label: "engineering time saved per new developer",
   },
   {
-    value: "30%",
-    label: "faster release cycles through reusable UI standards",
+    value: "17+",
+    label: "engineers enabled to AI White Belt certification as AI Champion",
   },
   {
-    value: "90%+",
-    label: "quality score target for tested, maintainable delivery",
+    value: "Top 6 / 70+",
+    label: "CodeRush 2026 Finalist for IncidentIQ, an AI incident-intelligence platform",
   },
 ];
 
 const services = [
   {
-    title: "Frontend Architecture",
-    text: "Component systems, page architecture, design-system adoption, and migration plans for React and Next.js products.",
+    title: "GenAI Application & Tooling",
+    text: "LLM-powered apps, MCP (Model Context Protocol) servers, and Copilot-driven automation that remove manual steps from real engineering workflows.",
   },
   {
-    title: "Performance & Quality",
-    text: "Core Web Vitals, bundle control, accessibility, automated checks, and release guardrails that keep teams confident.",
+    title: "AI Adoption & Enablement",
+    text: "Prompt engineering, Copilot rollout, and AI Champion programs that raise an organization's AI readiness and certification rates.",
   },
   {
-    title: "Client Product Delivery",
-    text: "Modern websites, dashboards, admin panels, and responsive web apps built with clear flows and business outcomes.",
+    title: "Full-Stack Product Delivery",
+    text: "Production React/Next.js and TypeScript front ends, API integration, and cloud deployment on Azure, the engineering base that ships AI features for real.",
   },
 ];
 
 const process = [
-  "Clarify business goal, audience, and conversion path.",
-  "Map the product flow before touching the component layer.",
-  "Build a scalable interface with reusable patterns.",
-  "Measure performance, accessibility, and release readiness.",
+  "Find the manual, repetitive workflow that is quietly costing the team hours.",
+  "Design an AI-assisted solution (MCP server, Copilot flow, or LLM automation) around the real task.",
+  "Build it as production software with guardrails, not a one-off script.",
+  "Measure the saved time and adoption, then enable the wider team to use it.",
 ];
 
 const positioningHighlights = [
   {
     title: "Hiring managers",
-    text: "See ownership, impact, and engineering maturity without digging through multiple pages.",
+    text: "See measurable AI impact (hours saved, engineers enabled, awards won) backed by 11+ years of shipping production software.",
   },
   {
-    title: "Clients and founders",
-    text: "Understand how frontend decisions connect directly to speed, clarity, and business outcomes.",
+    title: "AI & platform teams",
+    text: "Understand how I turn GenAI and developer-experience ideas into deployed tooling that the whole team actually adopts.",
   },
   {
-    title: "LinkedIn visitors",
-    text: "Get a quick profile snapshot, then move into projects, case study, and direct contact.",
+    title: "Recruiters & LinkedIn visitors",
+    text: "Get a fast snapshot of AI work and recognition, then move into projects, the MCP case study, and direct contact.",
   },
 ];
 
@@ -83,8 +83,8 @@ export default function Home() {
       <section className="section-shell py-6 sm:py-8">
         <div className="relative min-h-[560px] overflow-hidden rounded-lg bg-zinc-950 text-white">
           <Image
-            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80"
-            alt="Modern workspace prepared for frontend architecture and product delivery"
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1800&q=80"
+            alt="Source code on screen representing AI software engineering"
             fill
             priority
             sizes="(min-width: 1280px) 1216px, 100vw"
@@ -93,21 +93,22 @@ export default function Home() {
           <div className="hero-image-mask absolute inset-0" />
           <div className="relative flex min-h-[560px] flex-col justify-between p-5 sm:p-8 lg:p-10">
             <div className="max-w-3xl pt-10 sm:pt-14 lg:pt-16">
-              <p className="eyebrow text-lime-200">Frontend Lead | React | Next.js | TypeScript</p>
+              <p className="eyebrow text-emerald-200">AI Engineer · GenAI &amp; MCP · Full-Stack</p>
               <h1 className="mt-4 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-                I build modern web products that clients trust and teams can scale.
+                I build AI-powered tools that save engineering teams real hours.
               </h1>
               <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-100 sm:text-lg">
-                I am Pankaj Dixit, a senior frontend developer focused on
-                enterprise UI architecture, polished product flows, and
-                measurable delivery outcomes for client-facing work.
+                I am Pankaj Dixit, an AI engineer and full-stack developer. I
+                turn GenAI, MCP servers, and Copilot into production tooling that
+                teams actually adopt, currently on the Microsoft Xbox account at
+                Tech Mahindra, on an 11+ year engineering foundation.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <Link href="#projects" className="btn-primary min-w-[11rem] border-white bg-white text-zinc-950 hover:border-lime-300 hover:bg-lime-300">
-                  View My Work
+                <Link href="#projects" className="btn-primary min-w-[11rem] border-white bg-white text-zinc-950 hover:border-emerald-300 hover:bg-emerald-300">
+                  View AI Work
                 </Link>
                 <Link href="#contact" className="btn-secondary min-w-[11rem] border-white/45 bg-white/10 text-white hover:border-white hover:bg-white/20">
-                  Start a Project
+                  Get in Touch
                 </Link>
               </div>
             </div>
@@ -115,7 +116,7 @@ export default function Home() {
             <div className="mt-10 grid gap-3 border-t border-white/25 pt-5 sm:grid-cols-2 lg:grid-cols-4">
               {proofPoints.map((point) => (
                 <div key={point.label}>
-                  <p className="text-2xl font-bold text-lime-200">{point.value}</p>
+                  <p className="text-xl font-bold text-emerald-200">{point.value}</p>
                   <p className="mt-1 text-sm leading-6 text-zinc-100">{point.label}</p>
                 </div>
               ))}
@@ -126,28 +127,28 @@ export default function Home() {
 
       <section className="section-shell py-10 sm:py-14">
         <div className="surface relative overflow-hidden rounded-lg p-6 sm:p-8 lg:p-10">
-          <div className="pointer-events-none absolute -right-20 top-0 h-56 w-56 rounded-full bg-lime-300/20 blur-3xl" />
+          <div className="pointer-events-none absolute -right-20 top-0 h-56 w-56 rounded-full bg-emerald-300/20 blur-3xl" />
           <div className="relative grid gap-8 lg:grid-cols-2 lg:items-start">
             <div className="max-w-2xl">
               <p className="eyebrow">Positioning</p>
               <h2 className="mt-3 text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl">
-                Built to earn trust in the first scroll.
+                AI impact, backed by real engineering.
               </h2>
               <p className="mt-4 text-base leading-8 text-zinc-600 sm:text-lg">
-                This flow moves from credibility to proof, then into services
-                and direct contact. It helps decision makers quickly answer one
-                question: can Pankaj lead and deliver high-quality frontend
-                products?
+                This page moves from proof to projects, then into focus areas and
+                direct contact. It answers one question for a hiring team fast:
+                can Pankaj ship GenAI tooling that delivers measurable results,
+                not just demos?
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 <span className="rounded-full border border-zinc-300 bg-white px-3 py-1 text-xs font-semibold text-zinc-700">
-                  Clear outcomes
+                  GenAI &amp; MCP
                 </span>
                 <span className="rounded-full border border-zinc-300 bg-white px-3 py-1 text-xs font-semibold text-zinc-700">
-                  Enterprise-ready
+                  Measurable impact
                 </span>
                 <span className="rounded-full border border-zinc-300 bg-white px-3 py-1 text-xs font-semibold text-zinc-700">
-                  Client-focused
+                  Production-ready
                 </span>
               </div>
             </div>
@@ -176,14 +177,14 @@ export default function Home() {
       <section id="services" className="section-shell py-12 sm:py-16">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="max-w-xl">
-            <p className="eyebrow">Services</p>
+            <p className="eyebrow">Focus Areas</p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl">
-              Work I can lead from plan to production.
+              Where I create the most value.
             </h2>
             <p className="mt-4 text-base leading-8 text-zinc-600">
-              Useful for agencies, founders, product teams, and enterprise
-              groups that need a frontend specialist who can think beyond UI
-              screens.
+              For AI, platform, and product teams that need an engineer who can
+              build GenAI tooling and ship it as dependable production software,
+              then get the rest of the team using it.
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
@@ -204,17 +205,17 @@ export default function Home() {
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div className="relative min-h-[420px] overflow-hidden rounded-lg bg-zinc-900">
             <Image
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1400&q=80"
-              alt="Product team reviewing frontend delivery work"
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80"
+              alt="Planning an engineering workflow before building"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
             />
           </div>
           <div>
-            <p className="eyebrow">Process</p>
+            <p className="eyebrow">How I Work</p>
             <h2 className="mt-3 text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl">
-              Clear flow before beautiful pixels.
+              Start from the real workflow, not the demo.
             </h2>
             <div className="metric-divider mt-6">
               {process.map((item, index) => (
@@ -234,13 +235,18 @@ export default function Home() {
         <div className="rounded-lg bg-zinc-950 p-6 text-white sm:p-8 lg:p-10">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
-              <p className="eyebrow text-lime-200">Availability</p>
+              <p className="eyebrow text-emerald-200">Open to Opportunities</p>
               <h2 className="mt-3 text-3xl font-bold leading-tight sm:text-4xl">
-                Ready for client work, team leadership, and frontend product ownership.
+                Open to AI engineer, GenAI, and AI-focused full-stack roles.
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-8 text-zinc-200">
-                Reach out directly through email, LinkedIn, or GitHub. You can
-                also send project details with the quick contact form.
+                Reach out directly through email, LinkedIn, or GitHub. Recruiters
+                and hiring teams can also send role details through the quick
+                message form.
+              </p>
+              <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-300/40 bg-emerald-300/10 px-3 py-1.5 text-sm font-semibold text-emerald-200">
+                <span className="h-2 w-2 rounded-full bg-emerald-300" />
+                Available at short notice
               </p>
               <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
                 {contactMethods.map((method) => (
@@ -249,9 +255,9 @@ export default function Home() {
                     href={method.href}
                     target={method.href.startsWith("http") ? "_blank" : undefined}
                     rel={method.href.startsWith("http") ? "noreferrer" : undefined}
-                    className="rounded-md border border-white/25 bg-white/5 px-4 py-3 transition-colors hover:border-lime-300 hover:bg-white/10"
+                    className="rounded-md border border-white/25 bg-white/5 px-4 py-3 transition-colors hover:border-emerald-300 hover:bg-white/10"
                   >
-                    <p className="text-xs font-bold uppercase tracking-wide text-lime-200">
+                    <p className="text-xs font-bold uppercase tracking-wide text-emerald-200">
                       {method.label}
                     </p>
                     <p className="mt-1 break-all text-sm text-zinc-100">{method.value}</p>
@@ -259,7 +265,7 @@ export default function Home() {
                 ))}
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
-                <Link href="/case-study" className="btn-primary border-lime-300 bg-lime-300 text-zinc-950 hover:border-white hover:bg-white">
+                <Link href="/case-study" className="btn-primary border-emerald-300 bg-emerald-300 text-zinc-950 hover:border-white hover:bg-white">
                   Read Case Study
                 </Link>
                 <Link href="/about" className="btn-secondary border-white/45 bg-white/10 text-white hover:border-white hover:bg-white/20">

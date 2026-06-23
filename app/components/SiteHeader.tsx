@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
 const navItems = [
   { label: "Work", href: "/#projects" },
-  { label: "Services", href: "/#services" },
-  { label: "Case Study", href: "/case-study" },
+  { label: "Focus", href: "/#services" },
+  { label: "Case Studies", href: "/case-study" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" },
 ];
@@ -18,8 +19,14 @@ export default function SiteHeader() {
     <header className="surface sticky top-4 z-30 rounded-lg px-3 py-3 sm:px-4">
       <nav className="flex items-center justify-between gap-3" aria-label="Global">
         <Link href="/" className="flex min-w-0 items-center gap-2 text-sm font-bold text-zinc-950">
-          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-md bg-zinc-950 text-xs text-white">
-            PD
+          <span className="relative grid h-9 w-9 shrink-0 overflow-hidden rounded-full bg-zinc-950 ring-1 ring-zinc-200">
+            <Image
+              src="/pankaj-headshot.jpg"
+              alt="Pankaj Dixit"
+              fill
+              sizes="36px"
+              className="scale-[1.08] object-cover object-[50%_18%]"
+            />
           </span>
           <span className="truncate">Pankaj Dixit</span>
         </Link>

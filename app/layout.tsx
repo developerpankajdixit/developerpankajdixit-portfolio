@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import SiteHeader from "./components/SiteHeader";
+import SiteFooter from "./components/SiteFooter";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
@@ -16,19 +17,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pankaj Dixit | Frontend Lead & Next.js Developer",
+  title: "Pankaj Dixit | AI Engineer & Full-Stack Developer",
   description:
-    "Client-ready portfolio for Pankaj Dixit, focused on React, Next.js, TypeScript, frontend architecture, and measurable product delivery.",
+    "AI Engineer and full-stack developer building GenAI automation, MCP servers, and Copilot-driven developer tooling. 11+ years of production engineering, currently on the Microsoft Xbox account at Tech Mahindra.",
+  keywords: [
+    "AI Engineer",
+    "GenAI",
+    "Generative AI",
+    "MCP",
+    "Model Context Protocol",
+    "GitHub Copilot",
+    "LLM applications",
+    "Full-Stack Developer",
+    "React",
+    "Next.js",
+    "Azure",
+    "Pankaj Dixit",
+  ],
   openGraph: {
-    title: "Pankaj Dixit | Frontend Lead & Next.js Developer",
+    title: "Pankaj Dixit | AI Engineer & Full-Stack Developer",
     description:
-      "React, Next.js, and TypeScript portfolio with selected work, case studies, and delivery impact.",
+      "Building AI-powered products and developer tooling (MCP servers, Copilot enablement, and GenAI automation) on an 11+ year full-stack engineering foundation.",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
+        url: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
         width: 1200,
         height: 630,
-        alt: "Modern workspace for frontend product delivery",
+        alt: "AI engineering and developer tooling workspace",
       },
     ],
   },
@@ -42,6 +57,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body
@@ -52,6 +68,7 @@ export default function RootLayout({
           <SiteHeader />
         </div>
         {children}
+        <SiteFooter />
         <Toaster
           position="bottom-right"
           toastOptions={{
@@ -66,7 +83,7 @@ export default function RootLayout({
             },
             success: {
               iconTheme: {
-                primary: "#84cc16",
+                primary: "#10b981",
                 secondary: "#000",
               },
             },

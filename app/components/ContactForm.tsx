@@ -77,10 +77,10 @@ export default function ContactForm() {
       className="rounded-lg border border-white/25 bg-white/5 p-5 backdrop-blur sm:p-6"
       aria-label="Quick contact form"
     >
-      <h3 className="text-lg font-bold text-white">Quick Contact Form</h3>
+      <h3 className="text-lg font-bold text-white">Quick Message</h3>
 
       <p className="mt-2 text-sm leading-6 text-zinc-200">
-        Submit this form to contact directly.
+        Share a role or opportunity and I&apos;ll get back to you.
       </p>
 
       <div className="mt-5 grid gap-4">
@@ -130,12 +130,12 @@ export default function ContactForm() {
         </label>
 
         <label className="text-sm font-semibold text-zinc-100">
-          Project details
+          Message
           <textarea
             required
             value={fields.message}
             name="message"
-            placeholder="Tell me about your project, timeline, and goals."
+            placeholder="Tell me about the role, team, or opportunity."
             rows={5}
             onChange={(e) =>
               setFields((prev) => ({ ...prev, message: e.target.value }))
@@ -151,9 +151,9 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={loading}
-        className="btn-primary mt-5 w-full border-lime-300 bg-lime-300 text-zinc-950 disabled:opacity-60"
+        className="btn-primary mt-5 w-full border-emerald-300 bg-emerald-300 text-zinc-950 disabled:opacity-60"
       >
-        {loading ? "Sending..." : "Send Inquiry"}
+        {loading ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
