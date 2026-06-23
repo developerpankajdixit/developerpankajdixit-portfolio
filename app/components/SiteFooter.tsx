@@ -2,7 +2,10 @@ import Link from "next/link";
 
 const footerLinks = [
   { label: "Email", href: "mailto:developerpankajdixit@gmail.com" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/developerpankajdixit/" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/developerpankajdixit/",
+  },
   { label: "GitHub", href: "https://github.com/developerpankajdixit" },
   { label: "Privacy", href: "/privacy" },
   { label: "Copyright", href: "/copyright" },
@@ -36,7 +39,10 @@ export default function SiteFooter() {
       </div>
       <p className="mt-4 text-center text-xs text-zinc-500">
         © {year} Pankaj Dixit. Built with Next.js.{" "}
-        <Link href="/about" className="font-semibold text-zinc-700 hover:text-zinc-950">
+        <Link
+          href="/about"
+          className="font-semibold text-zinc-700 hover:text-zinc-950"
+        >
           About
         </Link>
       </p>

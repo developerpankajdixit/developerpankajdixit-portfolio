@@ -18,7 +18,9 @@ export default function CopyrightPage() {
           site content, please contact me for written permission.
         </p>
 
-        <p className="mt-6 text-xs text-zinc-500">Return to <Link href="/">home</Link>.</p>
+        <p className="mt-6 text-xs text-zinc-500">
+          Return to <Link href="/">home</Link>.
+        </p>
       </div>
     </main>
   );

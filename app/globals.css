@@ -48,9 +48,11 @@ button {
   z-index: -2;
   background:
     linear-gradient(90deg, rgba(16, 17, 20, 0.045) 1px, transparent 1px),
-    linear-gradient(rgba(16, 17, 20, 0.035) 1px, transparent 1px),
-    #f6f8fb;
-  background-size: 44px 44px, 44px 44px, auto;
+    linear-gradient(rgba(16, 17, 20, 0.035) 1px, transparent 1px), #f6f8fb;
+  background-size:
+    44px 44px,
+    44px 44px,
+    auto;
 }
 
 .app-bg::after {
@@ -149,7 +151,12 @@ button {
 
 .hero-image-mask {
   background:
-    linear-gradient(90deg, rgba(16, 17, 20, 0.82), rgba(16, 17, 20, 0.46) 48%, rgba(16, 17, 20, 0.22)),
+    linear-gradient(
+      90deg,
+      rgba(16, 17, 20, 0.82),
+      rgba(16, 17, 20, 0.46) 48%,
+      rgba(16, 17, 20, 0.22)
+    ),
     linear-gradient(0deg, rgba(16, 17, 20, 0.7), transparent 34%);
 }
 
@@ -157,9 +164,12 @@ button {
   border-top: 1px solid rgba(16, 17, 20, 0.12);
 }
 
-/* Anti-copy / UX rules (note: these are deterrents, not foolproof protections) */
-.no-select,
-.no-select * {
+/* Anti-copy / UX rules (note: these are deterrents, not foolproof protections).
+   Change: make selection available by default for accessibility. Use
+   `.protect-selective` on elements you want to disable selection for (e.g., images).
+*/
+.protect-selective,
+.protect-selective * {
   -webkit-user-select: none !important;
   -ms-user-select: none !important;
   user-select: none !important;
@@ -187,7 +197,7 @@ button {
   right: 12px;
   bottom: 12px;
   z-index: 9999;
-  background: rgba(16,17,20,0.7);
+  background: rgba(16, 17, 20, 0.7);
   color: #fff;
   padding: 6px 10px;
   border-radius: 8px;

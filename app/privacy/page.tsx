@@ -20,14 +20,19 @@ export default function PrivacyPage() {
 
         <h2 className="mt-6 text-lg font-semibold">Contact</h2>
         <p className="mt-2 text-sm text-zinc-700">
-          For privacy requests, email me at{' '}
-          <a href="mailto:developerpankajdixit@gmail.com" className="font-semibold">
+          For privacy requests, email me at{" "}
+          <a
+            href="mailto:developerpankajdixit@gmail.com"
+            className="font-semibold"
+          >
             developerpankajdixit@gmail.com
           </a>
           .
         </p>
 
-        <p className="mt-6 text-xs text-zinc-500">Return to <Link href="/">home</Link>.</p>
+        <p className="mt-6 text-xs text-zinc-500">
+          Return to <Link href="/">home</Link>.
+        </p>
       </div>
     </main>
   );
