@@ -34,16 +34,6 @@ const nextConfig: NextConfig = {
             value: "geolocation=(), microphone=(), camera=()",
           },
           { key: "X-XSS-Protection", value: "0" },
-          {
-            key: "Content-Security-Policy",
-            value:
-              "default-src 'self' https:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://cdn.vercel-insights.com https://*.vercel-insights.com; style-src 'self' 'unsafe-inline' https:; font-src 'self' https: data:; frame-ancestors 'none';",
-          },
-          {
-            key: "Content-Security-Policy-Report-Only",
-            value:
-              "default-src 'self' https:; img-src 'self' data: https:; script-src 'self' https://cdn.vercel-insights.com https://*.vercel-insights.com; style-src 'self' https:; font-src 'self' https: data:; frame-ancestors 'none'; report-uri /api/csp-report;",
-          },
         ],
       },
     ];

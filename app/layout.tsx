@@ -55,22 +55,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const handleCopy = (e: React.ClipboardEvent) => {
-    // Allow copying but append a short attribution to the clipboard.
-    try {
-      const selectionText = (typeof window !== "undefined" && window.getSelection()
-        ? window.getSelection()!.toString()
-        : "") || "";
-      const origin = typeof window !== "undefined" ? window.location.origin : "";
-      const attribution = `\n\nSource: ${origin} — © Pankaj Dixit`;
-      const finalText = selectionText + attribution;
-      e.clipboardData.setData("text/plain", finalText);
-      e.preventDefault();
-    } catch (err) {
-      // Fallback: don't block copy if something goes wrong
-      return;
-    }
-  };
   return (
     <html
       lang="en"
@@ -78,9 +62,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body
-        className="app-bg watermark min-h-full text-zinc-950"
+        className="app-bg min-h-full text-zinc-950"
         suppressHydrationWarning={true}
-        onCopy={handleCopy}
       >
         <div className="section-shell pt-4">
           <SiteHeader />
@@ -109,7 +92,6 @@ export default function RootLayout({
         />
         <Analytics />
         <SpeedInsights />
-        <div className="copy-notice">Content protected — © Pankaj Dixit</div>
       </body>
     </html>
   );
