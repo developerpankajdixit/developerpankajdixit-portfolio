@@ -123,8 +123,8 @@ const recognition = [
 
 const certifications = {
   "AI & GenAI": [
+    "GitHub Copilot Certification (2026)",
     "AI White Belt",
-    "GitHub Copilot",
     "Prompt Engineering for Everyone (2025)",
     "Introduction to Generative AI",
     "Introduction to Large Language Models",
