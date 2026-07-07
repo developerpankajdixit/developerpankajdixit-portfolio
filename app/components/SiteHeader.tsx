@@ -9,6 +9,7 @@ const navItems = [
   { label: "Focus", href: "/#services" },
   { label: "Case Studies", href: "/case-study" },
   { label: "About", href: "/about" },
+  { label: "Resume", href: "/Pankaj_Dixit_AI_Engineer_Resume.pdf" },
   { label: "Contact", href: "/#contact" },
 ];
 

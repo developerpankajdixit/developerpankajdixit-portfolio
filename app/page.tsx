@@ -75,6 +75,11 @@ const contactMethods = [
     value: "github.com/developerpankajdixit",
     href: "https://github.com/developerpankajdixit",
   },
+  {
+    label: "Resume",
+    value: "Download PDF",
+    href: "/Pankaj_Dixit_AI_Engineer_Resume.pdf",
+  },
 ];
 
 export default function Home() {
@@ -257,7 +262,11 @@ export default function Home() {
                   <a
                     key={method.label}
                     href={method.href}
-                    target={method.href.startsWith("http") ? "_blank" : undefined}
+                    target={
+                      method.href.startsWith("http") || method.href.endsWith(".pdf")
+                        ? "_blank"
+                        : undefined
+                    }
                     rel={method.href.startsWith("http") ? "noreferrer" : undefined}
                     className="rounded-md border border-white/25 bg-white/5 px-4 py-3 transition-colors hover:border-emerald-300 hover:bg-white/10"
                   >

@@ -118,7 +118,7 @@ const recognition = [
   },
   {
     title: "Client & Internal Recognition",
-    text: "Pat on the Back awards from the Tech Mahindra IBU head, and direct appreciation from Microsoft stakeholders.",
+    text: "Multiple awards from Tech Mahindra leadership, and direct appreciation from Microsoft stakeholders.",
   },
 ];
 

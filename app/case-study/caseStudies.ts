@@ -33,22 +33,22 @@ export const caseStudies: CaseStudy[] = [
     slug: "ai-onboarding-mcp-server",
     navTitle: "AI-Powered Developer Onboarding (MCP Server)",
     cardSummary:
-      "A tool in VS Code's Copilot chat that sets up a new developer's whole environment, and runs the project day to day, from two simple messages.",
+      "A set of AI tools in VS Code's Copilot chat that sets up a new developer's whole environment, and runs the project day to day, from two simple messages.",
     eyebrow: "Microsoft Xbox · Tech Mahindra",
     title: "AI-powered onboarding: from two weeks to thirty minutes.",
     summary:
-      "During my own onboarding I hit the same slow, manual setup everyone did. So I documented every missing step, simplified the process, and then built an AI tool that does the whole thing. A new developer is now ready in under 30 minutes instead of about two weeks, and the same tool also handles the daily project start-up.",
+      "When I joined the project, setting up my development environment took nearly two weeks of manual steps, and every new developer went through the same thing. So I documented every missing step, simplified the process, and then built an MCP server with dedicated AI tools for each task. A new developer is now ready in under 30 minutes. I also built tools for the daily project start-up, which used to take 15 to 30 minutes by hand, and up to an hour when someone missed a step. It now runs in under 4 minutes.",
     heroImage:
       "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1400&q=80",
     heroAlt: "AI-powered automation pipeline for developer onboarding",
     problemHeading: "Both first setup and daily start-up were slow and manual.",
     problemText:
-      "The project had a complicated setup spread across a 15-step guide and several wiki pages: install the software, configure the web server (IIS), connect the VPN, install and run Docker, download images, start the Azure services, set up Visual Studio, and clone the code. It was easy to miss a step, and almost everyone hit problems that were not written down anywhere. Even after setup, starting the project each day meant repeating many of those steps by hand.",
+      "The project had a complicated setup spread across a 15-step guide and several wiki pages: install the software, configure the web server (IIS), connect the VPN, install and run Docker, download the packages it needs, start the Azure services, set up Visual Studio, and clone the code. It was easy to miss a step, and almost everyone hit problems that were not written down anywhere. Even after setup, starting the project each day meant repeating many of those steps by hand, which took 15 to 30 minutes, and up to an hour when someone missed a step.",
     impactHeading: "Two weeks of setup became one guided run.",
     impact: [
       { label: "Onboarding time", value: "2 wks → 30 min" },
+      { label: "Daily start-up", value: "30 min → 4 min" },
       { label: "Saved per developer", value: "80+ hrs" },
-      { label: "AI-powered tools", value: "21" },
     ],
     approachEyebrow: "Design Decisions",
     approachHeading: "The choices that made it work.",
@@ -57,7 +57,7 @@ export const caseStudies: CaseStudy[] = [
       "Simplify before automating. I cut steps that were not needed (for example, no longer opening Visual Studio just to build and clean the project over and over), so the tool was not automating busywork.",
       "Use the tool developers already have. It runs inside the Copilot chat in VS Code, so there is nothing new to learn.",
       "Build it as real, reliable software, not a quick script, with prerequisite checks and error handling so it works on different machines.",
-      "Automate both halves: the one-time setup and the daily project start-up, since both were manual and repeated.",
+      "Automate both halves with dedicated tools: one set for the one-time setup, another for the daily project start-up, since both were manual and repeated.",
     ],
     howItWorksHeading: "Two chat messages do the whole job.",
     howItWorksIntro:
@@ -77,7 +77,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         title: "Message 2: run the project locally",
-        text: "A second message starts the daily run: it brings up Docker, starts the Azure services, builds the solution, and runs the container scripts, all the tasks that used to be manual every day.",
+        text: "A second message triggers the start-up tools: they bring up Docker, start the Azure services, build the solution, and run the container scripts. Tasks that took 15 to 30 minutes by hand every day now finish in under 4 minutes.",
       },
       {
         title: "A daily health check",
@@ -85,7 +85,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         title: "The result",
-        text: "Onboarding drops from about two weeks to under 30 minutes, and the daily start-up becomes a single message.",
+        text: "Onboarding drops from about two weeks to under 30 minutes, and the daily start-up drops from 15 to 30 minutes of manual steps, sometimes an hour when something was missed, to a single message that finishes in under 4 minutes.",
       },
     ],
     challengesHeading: "The hard parts, and how I solved them.",
@@ -111,7 +111,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStackHeading: "Real production software, not a demo.",
     techStackIntro:
-      "About 6,000 lines of TypeScript across 21 tools, built to the MCP standard with progress updates and error handling throughout.",
+      "21 tools in TypeScript, built to the MCP standard with progress updates and error handling throughout.",
     techStack: [
       "TypeScript",
       "Node.js 20",
@@ -146,8 +146,8 @@ export const caseStudies: CaseStudy[] = [
       "When something broke, engineers created tickets by hand hours later, around 30% of incidents went to the wrong team, and real investigation only started after 20 to 40 minutes of reading logs. The same problems were investigated again and again, because nothing remembered past fixes.",
     impactHeading: "Hours of busywork became minutes of review.",
     impact: [
-      { label: "Alert to draft fix (POC)", value: "<10 min" },
-      { label: "Routing accuracy (POC)", value: "~95%" },
+      { label: "Alert to draft fix (proof of concept)", value: "<10 min" },
+      { label: "Routing accuracy (proof of concept)", value: "95%" },
       { label: "Human review", value: "Every change" },
     ],
     approachEyebrow: "Design Decisions",
@@ -240,9 +240,9 @@ export const caseStudies: CaseStudy[] = [
       "Between the tests passing and someone approving the release, nothing actually checked that the live app really worked. Blank pages, broken logins, 'access denied' errors on data, and dead services all slipped through. One real case: an admin page started returning an 'access denied' error after a release, went unnoticed for days, and needed a manual investigation, while all the tests stayed green the whole time.",
     impactHeading: "No added wait, real safety gained.",
     impact: [
-      { label: "Check runtime", value: "~30 sec" },
-      { label: "Tests passing", value: "51" },
-      { label: "Failure types caught", value: "5" },
+      { label: "Check runtime", value: "30 sec" },
+      { label: "Added release wait", value: "None" },
+      { label: "Final call", value: "Human" },
     ],
     approachEyebrow: "Design Decisions",
     approachHeading: "Strict checks block. AI advises. People decide.",
@@ -318,13 +318,13 @@ export const caseStudies: CaseStudy[] = [
     closingHeading: "AI as an advisor, not the decision-maker.",
     closingText:
       "The key idea is the 'block, advise, decide' rule: provable checks hold the gate, AI adds judgment where it helps, and people stay in charge. That is what makes an AI safety tool something the people who own production can trust.",
-    note: "Implementation complete, 51 tests passing, ready for review. My own concept and architecture; full implementation details shared on request.",
+    note: "Implementation complete and ready for review. My own concept and architecture; full implementation details shared on request.",
   },
   {
     slug: "legacy-ui-modernization",
     navTitle: "Legacy UI Rebuild (Angular to React)",
     cardSummary:
-      "Rebuilt an old Angular 1.x admin tool (~20 pages) in modern React and TypeScript, with reusable patterns the team adopted and no backend changes.",
+      "Rebuilt an old Angular 1.x admin tool (20+ pages) in modern React and TypeScript, with reusable patterns the team adopted and no backend changes.",
     eyebrow: "Microsoft Xbox · Tech Mahindra",
     title: "Legacy UI rebuild: old Angular to modern React, no backend changes.",
     summary:
@@ -337,7 +337,7 @@ export const caseStudies: CaseStudy[] = [
       "An old Angular 1.x tool that internal users relied on to configure features had fallen behind. It looked different from the rest of the product, made you load a whole new page just to edit one thing, and had no dark mode, weak error messages, and poor accessibility. Everything else had already moved to modern React.",
     impactHeading: "A modern base, exactly the same behavior.",
     impact: [
-      { label: "Admin pages", value: "~20" },
+      { label: "Admin pages", value: "20+" },
       { label: "Backend changes", value: "Zero" },
       { label: "New stack", value: "React 18 + TS" },
     ],

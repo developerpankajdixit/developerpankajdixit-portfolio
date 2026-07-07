@@ -61,8 +61,8 @@ const projects: Project[] = [
       "Made human review mandatory before any merge, with a PII and secret scrubber and a full audit log on every action",
     ],
     metrics: [
-      { label: "Signal to draft PR (POC)", value: "<10 min" },
-      { label: "Routing accuracy (POC)", value: "~95%" },
+      { label: "Alert to draft fix (POC)", value: "<10 min" },
+      { label: "Routing accuracy (POC)", value: "95%" },
     ],
     categories: ["Featured", "AI & Automation"],
     image:
@@ -79,11 +79,11 @@ const projects: Project[] = [
     contributions: [
       "Designed a CD pipeline gate that runs in parallel to the existing Playwright tests, adding about 30 seconds and zero time to the critical path",
       "Built it on a clear contract: deterministic checks (render, API health, TLS) block the deploy, AI checks (visual diff, failure diagnosis, risk score) only advise, and humans decide",
-      "Shipped a dual-provider design (GitHub Models by default, Azure OpenAI for single-tenant) behind one config flag, with a one-line YAML rollback and 51 tests on the gate itself",
+      "Shipped a dual-provider design (GitHub Models by default, Azure OpenAI for single-tenant) behind one config flag, with a one-line rollback if the gate ever misbehaves",
     ],
     metrics: [
-      { label: "Gate runtime", value: "~30 sec" },
-      { label: "Tests passing", value: "51" },
+      { label: "Gate runtime", value: "30 sec" },
+      { label: "Added release wait", value: "None" },
     ],
     categories: ["Featured", "AI & Automation"],
     image:
@@ -96,14 +96,14 @@ const projects: Project[] = [
     title: "Legacy UI Modernization (Angular to React)",
     client: "Microsoft / Xbox · Tech Mahindra",
     problem:
-      "An end-of-life Angular 1.x configuration portal (~20 admin pages) had drifted from the team's design system, forced full-page navigation for every edit, and was the last holdout in an otherwise React monorepo.",
+      "An end-of-life Angular 1.x configuration portal (20+ admin pages) had drifted from the team's design system, forced full-page navigation for every edit, and was the last holdout in an otherwise React monorepo.",
     contributions: [
-      "Leading the migration to React 18 and TypeScript (strict mode) with Redux and redux-saga, embedded in the existing Yarn-workspaces monorepo with zero backend changes",
+      "Leading the migration to React 18 and TypeScript (strict mode) with Redux and redux-saga, embedded in the team's existing codebase with zero backend changes",
       "Established reusable patterns (saga-per-domain, an LCE loading/content/error state envelope, inline edit modals, themed CSS variables) that other engineers now follow page by page",
       "Improved UX alongside the rewrite: dark theme, inline modals instead of route sprawl, distinct empty and error states, and accessibility on icon-only controls",
     ],
     metrics: [
-      { label: "Admin pages", value: "~20" },
+      { label: "Admin pages", value: "20+" },
       { label: "Backend changes", value: "Zero" },
     ],
     categories: ["Featured", "Full-Stack"],
