@@ -20,7 +20,8 @@ export default function SiteFooter() {
         <div>
           <p className="text-sm font-bold text-zinc-950">Pankaj Dixit</p>
           <p className="mt-1 text-sm text-zinc-600">
-            AI Engineer &amp; Full-Stack Developer · Open to opportunities
+            AI Engineer &amp; Full-Stack Developer · Remote-first, open to
+            opportunities
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">

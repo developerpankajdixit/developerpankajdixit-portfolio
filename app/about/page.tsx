@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Pankaj Dixit | AI Engineer & Full-Stack Developer",
   description:
-    "AI Engineer and full-stack developer with 11+ years of production experience, focused on GenAI automation, MCP servers, Copilot enablement, and AI-powered developer tooling.",
+    "AI Engineer with 10+ years of production experience: Copilot rollout and troubleshooting, MCP servers, GenAI automation, AI adoption programs, and AI-powered developer tooling. Remote-first.",
 };
 
 const strengths = [
@@ -18,12 +18,12 @@ const strengths = [
     text: "Automating onboarding, environment setup, and repetitive workflows so teams spend hours on product, not plumbing.",
   },
   {
-    title: "AI Adoption",
-    text: "Prompt engineering, Copilot rollout, and AI Champion enablement that move a whole team from curious to certified.",
+    title: "AI Adoption & Support",
+    text: "Copilot rollout, configuration, and troubleshooting, with prompt-engineering coaching and AI Champion enablement that move a whole team from curious to certified.",
   },
   {
     title: "Full-Stack Delivery",
-    text: "11+ years shipping production React/Next.js, TypeScript, and cloud-deployed apps, the foundation that makes AI features real.",
+    text: "10+ years shipping production React/Next.js, TypeScript, and cloud-deployed apps, the foundation that makes AI features real.",
   },
 ];
 
@@ -42,10 +42,10 @@ const techCategories = {
     "Responsible AI",
     "AI Adoption & Enablement",
   ],
-  "ML & MLOps": [
+  "Machine Learning & MLOps": [
+    "Machine Learning on Google Cloud",
     "MLOps (Vertex AI)",
     "BigQuery ML",
-    "ML on Google Cloud",
     "Vertex AI Notebooks",
   ],
   "Cloud & Infrastructure": [
@@ -70,6 +70,7 @@ const techCategories = {
   ],
   "Backend & APIs": [
     "Node.js",
+    "Python",
     "REST APIs",
     "JSON-RPC",
     "GraphQL",
@@ -162,14 +163,14 @@ export default function About() {
           <div>
             <p className="eyebrow">About Pankaj</p>
             <h1 className="mt-3 text-4xl font-bold leading-tight text-zinc-950 sm:text-5xl">
-              An AI engineer who ships GenAI tooling on a real engineering
-              foundation.
+              An AI engineer who ships the tooling and gets teams using it.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-600 sm:text-lg">
-              I build AI-powered automation, MCP servers, and Copilot-driven
-              tooling that teams actually adopt, and I deploy it as production
-              software. My work sits where GenAI, developer experience, and
-              measurable business outcomes meet.
+              I help engineering teams adopt, configure, and troubleshoot AI
+              developer tools, and I build AI-powered automation, MCP servers,
+              and Copilot-driven tooling as production software. My work sits
+              where GenAI, developer experience, and measurable business
+              outcomes meet. Remote-first, open to hybrid or on-site.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/#projects" className="btn-primary">
@@ -223,16 +224,18 @@ export default function About() {
               production software: designed, tested, deployed, and adopted.
             </p>
             <p className="mt-4 text-base leading-8 text-zinc-600">
-              That AI work stands on 11+ years of full-stack delivery. I build
+              That AI work stands on 10+ years of full-stack delivery. I build
               React/Next.js applications in TypeScript, connect them to modern
               APIs, and ship them with automated CI/CD, containerized builds, and
               cloud hosting on Azure or Google Cloud.
             </p>
             <p className="mt-4 text-base leading-8 text-zinc-600">
               I also drive AI adoption directly. As an AI Champion I ran weekly
-              Copilot and prompt-engineering sessions and enabled 17+ engineers
-              to earn AI White Belt certification. Building the tool is only half
-              the value; getting a team to actually use it is the other half.
+              Copilot and prompt-engineering sessions, supported engineers
+              through setup, configuration, and usage issues, and enabled 17+
+              engineers to earn AI White Belt certification. Building the tool
+              is only half the value; getting a team to actually use it is the
+              other half.
             </p>
             <p className="mt-4 text-base leading-8 text-zinc-600">
               I balance capability, reliability, and cost so every solution is
@@ -323,7 +326,7 @@ export default function About() {
         <div className="rounded-lg bg-zinc-950 p-6 text-white sm:p-8 lg:p-10">
           <div className="grid gap-6 md:grid-cols-3">
             <div>
-              <p className="text-3xl font-bold text-emerald-200">11+ yrs</p>
+              <p className="text-3xl font-bold text-emerald-200">10+ yrs</p>
               <p className="mt-2 text-sm leading-6 text-zinc-200">
                 production engineering across full-stack and AI tooling
               </p>

@@ -35,7 +35,7 @@ const projects: Project[] = [
     problem:
       "New developers spent roughly two weeks on environment setup (VPN, Docker, authentication, builds, and linting) before their first real contribution.",
     contributions: [
-      "Built a production MCP (Model Context Protocol) server in TypeScript (21 tools, ~6,000 lines) that a new developer triggers from the Copilot chat in VS Code, simply by asking to complete their onboarding and project setup",
+      "Built a production MCP (Model Context Protocol) server in TypeScript with 21 tools that a new developer triggers from the Copilot chat in VS Code, simply by asking to complete their onboarding and project setup",
       "The server checks credentials and access/entitlement requests, detects what is missing (repo clone, software installs, configuration), and performs the setup itself",
       "Completes repository setup and wires in run tools, turning days of manual setup and doc-reading into a guided, self-serve flow reused for every new joiner",
     ],

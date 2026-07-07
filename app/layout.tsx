@@ -20,8 +20,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Pankaj Dixit | AI Engineer & Full-Stack Developer",
   description:
-    "AI Engineer and full-stack developer building GenAI automation, MCP servers, and Copilot-driven developer tooling. 11+ years of production engineering, currently on the Microsoft Xbox account at Tech Mahindra.",
+    "AI Engineer helping teams adopt, configure, and troubleshoot AI developer tools: GitHub Copilot, MCP servers, and GenAI automation. 10+ years of production engineering, currently on the Microsoft Xbox account at Tech Mahindra. Remote-first, open to hybrid or on-site.",
   keywords: [
+    "AI Tools Support Engineer",
+    "AI Support Engineer",
+    "Copilot Enablement",
+    "AI Adoption",
+    "Developer Tooling Support",
+    "Remote AI Engineer",
     "AI Engineer",
     "GenAI",
     "Generative AI",
@@ -30,6 +36,8 @@ export const metadata: Metadata = {
     "GitHub Copilot",
     "LLM applications",
     "Full-Stack Developer",
+    "Python",
+    "Machine Learning",
     "React",
     "Next.js",
     "Azure",
@@ -38,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pankaj Dixit | AI Engineer & Full-Stack Developer",
     description:
-      "Building AI-powered products and developer tooling (MCP servers, Copilot enablement, and GenAI automation) on an 11+ year full-stack engineering foundation.",
+      "Helping engineering teams adopt and troubleshoot AI developer tools (MCP servers, Copilot enablement, GenAI automation) on an 10+ year full-stack engineering foundation. Remote-first.",
     images: [
       {
         url: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",

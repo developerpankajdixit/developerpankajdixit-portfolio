@@ -28,8 +28,8 @@ const services = [
     text: "LLM-powered apps, MCP (Model Context Protocol) servers, and Copilot-driven automation that remove manual steps from real engineering workflows.",
   },
   {
-    title: "AI Adoption & Enablement",
-    text: "Prompt engineering, Copilot rollout, and AI Champion programs that raise an organization's AI readiness and certification rates.",
+    title: "AI Tools Support & Enablement",
+    text: "Copilot rollout, configuration, and troubleshooting, plus prompt-engineering coaching and AI Champion programs that raise an organization's AI readiness and certification rates.",
   },
   {
     title: "Full-Stack Product Delivery",
@@ -47,7 +47,7 @@ const process = [
 const positioningHighlights = [
   {
     title: "Hiring managers",
-    text: "See measurable AI impact (hours saved, engineers enabled, awards won) backed by 11+ years of shipping production software.",
+    text: "See measurable AI impact (hours saved, engineers enabled, awards won) backed by 10+ years of shipping production software.",
   },
   {
     title: "AI & platform teams",
@@ -93,15 +93,18 @@ export default function Home() {
           <div className="hero-image-mask absolute inset-0" />
           <div className="relative flex min-h-[560px] flex-col justify-between p-5 sm:p-8 lg:p-10">
             <div className="max-w-3xl pt-10 sm:pt-14 lg:pt-16">
-              <p className="eyebrow text-emerald-200">AI Engineer · GenAI &amp; MCP · Full-Stack</p>
+              <p className="eyebrow text-emerald-200">AI Engineer · GenAI, MCP &amp; Copilot · Full-Stack</p>
               <h1 className="mt-4 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-                I build AI-powered tools that save engineering teams real hours.
+                I help engineering teams adopt AI tools, and build the ones that
+                save them real hours.
               </h1>
               <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-100 sm:text-lg">
-                I am Pankaj Dixit, an AI engineer and full-stack developer. I
-                turn GenAI, MCP servers, and Copilot into production tooling that
-                teams actually adopt, currently on the Microsoft Xbox account at
-                Tech Mahindra, on an 11+ year engineering foundation.
+                I am Pankaj Dixit, an AI engineer with a full-stack foundation.
+                I roll out, troubleshoot, and teach GenAI tooling (Copilot, MCP
+                servers, LLM automation) and build it as production software,
+                currently on the Microsoft Xbox account at Tech Mahindra, on an
+                10+ year engineering base. Remote-first, open to hybrid or
+                on-site.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link href="#projects" className="btn-primary min-w-[11rem] border-white bg-white text-zinc-950 hover:border-emerald-300 hover:bg-emerald-300">
@@ -237,7 +240,8 @@ export default function Home() {
             <div>
               <p className="eyebrow text-emerald-200">Open to Opportunities</p>
               <h2 className="mt-3 text-3xl font-bold leading-tight sm:text-4xl">
-                Open to AI engineer, GenAI, and AI-focused full-stack roles.
+                Open to AI tools support, AI engineer, and GenAI-focused
+                full-stack roles.
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-8 text-zinc-200">
                 Reach out directly through email, LinkedIn, or GitHub. Recruiters
@@ -246,7 +250,7 @@ export default function Home() {
               </p>
               <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-300/40 bg-emerald-300/10 px-3 py-1.5 text-sm font-semibold text-emerald-200">
                 <span className="h-2 w-2 rounded-full bg-emerald-300" />
-                Available at short notice
+                Remote-first · Available at short notice · Open to hybrid/on-site
               </p>
               <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
                 {contactMethods.map((method) => (
