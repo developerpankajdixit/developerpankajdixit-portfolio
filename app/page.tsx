@@ -88,8 +88,8 @@ export default function Home() {
       <section className="section-shell py-6 sm:py-8">
         <div className="relative min-h-[560px] overflow-hidden rounded-lg bg-zinc-950 text-white">
           <Image
-            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1800&q=80"
-            alt="Source code on screen representing AI software engineering"
+            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1800&q=80"
+            alt="Dark code on screen representing AI software engineering"
             fill
             priority
             sizes="(min-width: 1280px) 1216px, 100vw"

@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "Helping engineering teams adopt and troubleshoot AI developer tools (MCP servers, Copilot enablement, GenAI automation) on an 10+ year full-stack engineering foundation. Remote-first.",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+        url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
         width: 1200,
         height: 630,
         alt: "AI engineering and developer tooling workspace",
