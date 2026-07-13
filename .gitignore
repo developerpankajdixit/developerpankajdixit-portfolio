@@ -42,3 +42,4 @@ next-env.d.ts
 
 # old resume versions (kept locally, not published)
 app/resume/old/
+!.env.example
